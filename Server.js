@@ -12,6 +12,9 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 // Set up the mail transporter
+app.get("/",async(res,res)=>{
+  res.send("Yes iam working fine");
+})
 const transporter = nodemailer.createTransport({
   service: 'gmail', // You can use other services like 'smtp.mailtrap.io'
   auth: {
